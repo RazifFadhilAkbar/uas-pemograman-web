@@ -1,0 +1,133 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://awsimages.detik.net.id/community/media/visual/2024/03/01/spongebob-squarepants.png?w=700&q=90'); /* Gambar latar belakang Spongebob */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-position: center;
+}
+
+/* Kalkulator container */
+#calc {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparansi dengan latar belakang */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+}
+
+/* Tampilan konten kalkulator */
+#content {
+    background: #f9c74f;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+/* Tampilan output hasil kalkulator */
+#output {
+    margin-bottom: 20px;
+}
+
+#res {
+    width: 100%;
+    max-width: 340px; /* Adjust the width to make it smaller */
+    height: 55px; /* Reduced height for a more compact result box */
+    text-align: right;
+    font-size: 28px; /* Adjusted font size for better fit */
+    border: 2px solid #333;
+    border-radius: 10px; /* Softer, rounded corners */
+    padding: 10px; /* Reduced padding */
+    background-color: #fff3b0;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    word-wrap: break-word; /* Prevent long text from overflowing */
+    white-space: nowrap; /* Prevent line breaks in the result */
+    letter-spacing: 1px; /* Add some spacing between letters for readability */
+}
+
+/* Tombol kalkulator */
+.btn input {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+    border-radius: 10px;
+    margin: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Tombol angka */
+.btn-num {
+    background-color: #ffdd69;
+    color: #333;
+}
+
+.btn-num:hover {
+    background-color: #ffb81c;
+    transform: scale(1.1);
+}
+
+/* Tombol operator (+, -, x, /) */
+.btn-operator {
+    background-color: #ff5e5e;
+    color: white;
+}
+
+.btn-operator:hover {
+    background-color: #ff3030;
+    transform: scale(1.1);
+}
+
+/* Tombol hasil (=) */
+.btn-equal {
+    background-color: #d4e157;
+    color: white;
+}
+
+.btn-equal:hover {
+    background-color: #aeea00;
+    transform: scale(1.1);
+}
+
+/* Tombol clear dan backspace */
+.btn-clear, .btn-backspace {
+    background-color: #ff7f50;
+    color: white;
+}
+
+.btn-clear:hover, .btn-backspace:hover {
+    background-color: #ff4c3b;
+    transform: scale(1.1);
+}
+
+/* Responsif untuk ukuran layar lebih kecil */
+@media screen and (max-width: 450px) {
+    #content {
+        padding: 15px;
+    }
+
+    .btn input {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    #res {
+        font-size: 28px;
+        max-width: 300px; /* Adjust width further on smaller screens */
+    }
+}
